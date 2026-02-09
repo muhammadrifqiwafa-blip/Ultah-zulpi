@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<title>Untuk Zulfa 💜</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif}
+
+body{
+  height:100vh;
+  background:radial-gradient(circle at top,#3a0b5f,#0a0014);
+  color:#fff;
+  overflow:hidden;
+}
+
+/* 🌙 SLOW ZOOM CINEMATIC */
+.scene{
+  position:fixed;
+  inset:0;
+  animation:zoom 30s ease-in-out infinite alternate;
+  z-index:0;
+}
+@keyframes zoom{
+  from{transform:scale(1)}
+  to{transform:scale(1.06)}
+}
+
+/* ✨ GLOW ROMANTIS */
+#glow{
+  position:fixed;
+  inset:0;
+  pointer-events:none;
+  background:radial-gradient(circle at center,
+    rgba(255,180,220,.35),
+    rgba(180,90,255,.25),
+    transparent 70%);
+  opacity:.25;
+  transition:opacity 3s ease;
+  z-index:1;
+}
+#glow.active{opacity:1}
+
+/* 💖 PARTIKEL HATI HALUS */
+.heart{
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:rgba(255,160,200,.9);
+  transform:rotate(45deg);
+  animation:float linear infinite;
+  filter:blur(.4px);
+  z-index:1;
+}
+.heart::before,
+.heart::after{
+  content:'';
+  position:absolute;
+  width:10px;
+  height:10px;
+  background:rgba(255,160,200,.9);
+  border-radius:50%;
+}
+.heart::before{top:-5px;left:0}
+.heart::after{left:-5px;top:0}
+
+@keyframes float{
+  from{
+    transform:translateY(110vh) rotate(45deg) scale(.6);
+    opacity:0;
+  }
+  20%{opacity:.8}
+  to{
+    transform:translateY(-20vh) rotate(45deg) scale(1.1);
+    opacity:0;
+  }
+}
+
+/* ===== CONTENT ===== */
+.center{
+  position:absolute;
+  top:50%;
+  left:50%;
+  transform:translate(-50%,-50%);
+  text-align:center;
+  width:90%;
+  z-index:3;
+}
+
+/* ❤️ FOTO SLIDESHOW PALING AMAN */
+.photo-box{
+  width:180px;
+  height:180px;
+  margin:0 auto 18px;
+  border-radius:50%;
+  overflow:hidden;
+  position:relative;
+  box-shadow:0 0 80px 35px rgba(190,90,255,1);
+}
+
+.slide{
+  position:absolute;
+  inset:0;
+  background-size:cover;
+  background-position:center;
+  opacity:0;
+  animation:fade 12s infinite;
+}
+
+.slide:nth-child(1){animation-delay:0s}
+.slide:nth-child(2){animation-delay:4s}
+.slide:nth-child(3){animation-delay:8s}
+
+@keyframes fade{
+  0%{opacity:0}
+  10%{opacity:1}
+  30%{opacity:1}
+  40%{opacity:0}
+  100%{opacity:0}
+}
+
+#birthday{
+  font-size:1.2em;
+  margin-bottom:8px;
+  color:#e0aaff;
+}
+
+#name{
+  font-size:1.8em;
+  font-weight:600;
+  min-height:2em;
+  margin-bottom:12px;
+}
+
+#text{
+  opacity:0;
+  transition:opacity 2s;
+  font-size:.95em;
+  line-height:1.6;
+}
+
+button{
+  margin-top:22px;
+  padding:12px 30px;
+  border:0;
+  border-radius:30px;
+  background:linear-gradient(135deg,#c77dff,#7b2cbf);
+  color:#fff;
+  font-size:1em;
+  cursor:pointer;
+  box-shadow:0 0 35px rgba(190,90,255,1);
+}
+button::before{content:"🎁 "}
+
+#love{
+  display:none;
+  font-size:1.3em;
+  margin-top:18px;
+}
+
+#ending{
+  position:fixed;
+  inset:0;
+  background:#000;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:1.4em;
+  opacity:0;
+  pointer-events:none;
+  transition:opacity 3s;
+  z-index:5;
+}
+</style>
+</head>
+
+<body>
+
+<div class="scene"></div>
+<div id="glow"></div>
+
+<audio id="music" loop>
+  <source src="Vocaroo 17nJFypaXkGG.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+/* 💖 heart particles */
+for(let i=0;i<28;i++){
+  const h=document.createElement('div');
+  h.className='heart';
+  h.style.left=Math.random()*100+'vw';
+  h.style.animationDuration=(14+Math.random()*8)+'s';
+  h.style.animationDelay=Math.random()*12+'s';
+  document.body.appendChild(h);
+}
+</script>
+
+<div class="center">
+  <div class="photo-box">
+    <div class="slide" style="background-image:url('F13.jpg')"></div>
+    <div class="slide" style="background-image:url('F10.jpg')"></div>
+    <div class="slide" style="background-image:url('F12.jpg')"></div>
+  </div>
+
+  <div id="birthday">🎉 Selamat Ulang Tahun 🎉</div>
+  <div id="name"></div>
+
+  <div id="text">
+    <p>
+      Di usia <b>18 tahun</b> ini, aku harap kamu tahu satu hal:  
+      kehadiranmu berarti lebih dari yang bisa aku jelaskan ✨  
+      <br><br>
+      Aku suka caramu tertawa, caramu tenang,  
+      dan caramu membuat hari-hariku terasa lebih hidup 💜  
+      <br><br>
+      Apa pun langkahmu ke depan, aku ingin jadi orang  
+      yang selalu mendoakanmu — dan memilihmu, setiap hari.
+    </p>
+    <small>— dari Ipkiiiiiiiiiiiiii</small>
+  </div>
+
+  <button onclick="showLove()">Buka Kadonya</button>
+  <div id="love">💍 Aku sayang kamu 💍</div>
+</div>
+
+<div id="ending">Aku tunggu jawabanmu</div>
+
+<script>
+const nameText="Zulfa Bunga Nur Qoiriah";
+let i=0;
+(function typing(){
+  if(i<nameText.length){
+    document.getElementById('name').innerHTML+=nameText.charAt(i++);
+    setTimeout(typing,100);
+  }else{
+    document.getElementById('text').style.opacity=1;
+  }
+})();
+
+function showLove(){
+  document.getElementById('music').play();
+  document.getElementById('love').style.display='block';
+  document.getElementById('glow').classList.add('active');
+  setTimeout(()=>document.getElementById('ending').style.opacity=1,3000);
+}
+</script>
+
+</body>
+</html>
